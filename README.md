@@ -97,6 +97,4 @@ Left: Original | Right: Detection + Count overlay
 * [SORT](https://github.com/abewley/sort)
 * [cvzone](https://github.com/cvzone/cvzone)
 
----
 
-Let me know if you want badges, a logo, or better demo visuals.
