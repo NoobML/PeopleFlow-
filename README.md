@@ -63,7 +63,21 @@ pip install -r requirements.txt
 python peopleCounter.py
 ```
 
+
 ---
+
+## 🖼️ Visual Assets
+
+### 🎯 Mask Used
+
+![Mask](mask-1.png)
+
+### ✨ Graphics Overlay
+
+![Graphics](graphics-1.png)
+
+---
+
 
 ## 🖼️ Demo
 
