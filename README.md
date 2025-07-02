@@ -16,18 +16,28 @@ Detects and counts people crossing virtual lines in a video using deep learning 
 
 ---
 
-## 📂 Folder Structure
+## 🖼️ Demo
+### Orignial
+![People](people.gif)
 
-```
-PeopleFlow/
-│
-├── peopleCounter.py         # Main Python script
-├── mask-1.png               # Binary mask for region of interest
-├── graphics-1.png           # UI overlay (semi-transparent)
-├── sort.py                  # SORT tracking algorithm (linked)
-├── demo.gif                 # Side-by-side demo (with/without detection)
-└── README.md
-```
+### Detection
+![People Detection](PeopleDetection.gif)
+---
+
+
+## 🧠 Model Info
+
+* **Model**: YOLOv8 (large)
+* **Detection Class**: `"person"` only
+* **Tracking**: SORT (Simple Online and Realtime Tracker)
+* **Line Crossing**: Custom-defined up/down lines with `tolerance`
+
+---
+
+## 📸 Controls
+
+* Press `q`: Quit
+* Press `s`: Save screenshot (`Person_count_<timestamp>.jpg`)
 
 ---
 
@@ -79,31 +89,36 @@ python peopleCounter.py
 ---
 
 
-## 🖼️ Demo
+PeopleCounter.py
 
-<p align="center">
-  <img src="demo.gif" width="600"/>
-</p>
+PeopleDetection.gif
+README.md
 
-Left: Original | Right: Detection + Count overlay
+graphics-1.png
 
----
+mask-1.png
+people.gif
+people.mp4
+sort.py
 
-## 🧠 Model Info
+## 📂 Folder Structure
 
-* **Model**: YOLOv8 (large)
-* **Detection Class**: `"person"` only
-* **Tracking**: SORT (Simple Online and Realtime Tracker)
-* **Line Crossing**: Custom-defined up/down lines with `tolerance`
+```
+PeopleFlow/
+│
+├── peopleCounter.py         # Main script: handles detection, tracking & counting
+├── PeopleDetection.gif      # Sample GIF showing people detection in action
+├── README.md                # Project overview, setup, and usage instructions
+├── graphics-1.png           # UI overlay for display (e.g., zone borders, count text)
+├── mask-1.png               # Binary mask for selecting region of interest (ROI)
+├── People.gif               # Animated demo of people counting
+├── People.mp4               # Video demo of people counting
+├── sort.py                  # SORT algorithm for tracking detected people
 
----
 
-## 📸 Controls
 
-* Press `q`: Quit
-* Press `s`: Save screenshot (`Person_count_<timestamp>.jpg`)
+```
 
----
 
 ## 📎 Acknowledgements
 
